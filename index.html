@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <section class="students">
+    <div class="students__container">
+      <h1 class="students__heading">Список студентов</h1>
+      <div class="students__form">
+        <h2 class="students__form-heading">Добавление нового студента</h2>
+        <div class="students__form-box">
+          <label class="students__form-label" for="input__surname">Фамилия
+            <input class="input" type="text" name="surname" id="input__surname" placeholder="Фамилия"
+              autocomplete="off">
+          </label>
+          <label class="students__form-label" for="input__name">Имя
+            <input class="input" type="text" name="name" id="input__name" placeholder="Имя" autocomplete="off">
+          </label>
+          <label class="students__form-label" for="input__patron">Отчество
+            <input class="input" type="text" name="patron" id="input__patron" placeholder="Отчество" autocomplete="off">
+          </label>
+          <label class="students__form-label" for="input__date">Дата рождения
+            <input class="input" type="date" name="date" id="input__date" autocomplete="off">
+          </label>
+          <label class="students__form-label" for="input__year">Год начала обучения
+            <input class="input" type="number" name="year" id="input__year" placeholder="Год начала обучения"
+              autocomplete="off">
+          </label>
+          <label class="students__form-label" for="input__spec">Факультет
+            <input class="input" type="text" name="spec" id="input__spec" placeholder="Факультет" autocomplete="off">
+          </label>
+        </div>
+        <button class="students__add-btn" id="add__btn">Внести в Список</button>
+        <div class="students__msg-box">
+          <h2 class="students__msg-heading">Сервиcные сообщения:</h2>
+          <p class="students__msg" id="students__msg">отсутствуют</p>
+        </div>
+      </div>
+      <div class="students__table-field">
+        <h2 class="students__form-heading">Фильтровать список по:</h2>
+        <div class="students__filter-box">
+          <label class="students__filter-label" for="filter__name">ФИО
+            <input class="input" type="text" name="name" id="filter__name" placeholder="ФИО" autocomplete="off">
+          </label>
+          <label class="students__filter-label" for="filter__start">Год начала обучения
+            <input class="input" type="number" name="start" id="filter__start" placeholder="Год начала обучения"
+              autocomplete="off">
+          </label>
+          <label class="students__filter-label" for="filter__finish">Год завершения обучения
+            <input class="input" type="number" name="finish" id="filter__finish" placeholder="Год завершения обучения"
+              autocomplete="off">
+          </label>
+          <label class="students__filter-label" for="filter__spec">Факультет
+            <input class="input" type="text" name="spec" id="filter__spec" placeholder="Факультет" autocomplete="off">
+          </label>
+        </div>
+        <table class="students__table" id="table">
+          <tr class="students__table-row students__table-row__first" id="first_row">
+            <td class="students__table-data students__table-data-first" id="table__name">ФИО</td>
+            <td class="students__table-data students__table-data-first" id="table__spec">Факультет</td>
+            <td class="students__table-data students__table-data-first" id="table__date">Дата рождения и возраст</td>
+            <td class="students__table-data students__table-data-first" id="table__course">Год обучения и номер курса
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

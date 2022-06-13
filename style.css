@@ -1,0 +1,169 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.students {
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(190, 243, 190);
+}
+
+.students__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.students__heading {
+  margin: 30px auto;
+  font-size: 36px;
+  text-align: center;
+}
+
+.students__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: lightgrey;
+}
+
+.students__form-heading {
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.students__form-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.students__form-label {
+  margin: 0 10px 10px 10px;
+  width: 200px;
+}
+
+.students__add-btn {
+  padding: 6px 8px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: background-color .3s ease, border .3s ease;
+}
+
+.students__add-btn:hover {
+  background-color: coral;
+  border: 2px solid gray;
+}
+
+.students__msg-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.students__msg-heading {
+  font-size: 20px;
+  text-align: center;
+}
+
+.students__msg {
+  min-height: 40px;
+  text-align: center;
+}
+
+.students__table-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.students__filter-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.students__filter-label {
+  margin: 0 10px 10px 10px;
+  width: 275px;
+}
+
+.input {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 3px;
+  transition: backgrpund-color .3s ease,
+    border .3s ease;
+  cursor: pointer;
+}
+
+.input:hover {
+  background-color: coral;
+  border: 2px solid gray;
+}
+
+.students__table {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+.students__table-data {
+  width: 25%;
+  text-align: center;
+  padding: 4px;
+  border: 2px dotted lightgrey;
+}
+
+.students__table-data-first {
+  border: 2px solid black;
+  font-weight: bold;
+  transition: background-color .3s ease;
+}
+
+.students__table-data-first:hover {
+  background-color: coral;
+  cursor: pointer;
+}
